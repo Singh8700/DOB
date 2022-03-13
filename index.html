@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Date Of Birt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div class="bg">
+    <div class="main">
+      <div class="data">
+        <h1 class="tit">WelCome to <br>
+        Magical Box Game</h1>
+        <form>
+        <div class="inp">
+        <input type="text" id="Name">
+        <input type="date" id="selects">
+        </div>
+        <div class="bn">
+        <input type="button" id="btn" data-toggle="collapse" data-target="#txt" class="btn" value="check">
+         
+        <input class="ret" data-target="#txt" data-toggle="collapse" id="ret" type="reset" value="Reset">
+        
+      </div>
+        </form>
+      </div>
+      <!--table is heer-->
+      <div class="table">
+        <table border="0">
+          <!--first row-->
+          <tr>
+            <td id="1">
+              
+            </td>
+            <td id="2">
+              
+            </td>
+            <td id="3">
+              
+            </td>
+          </tr>
+          <!--2nd row-->
+          <tr>
+            <td id="4">
+              
+            </td>
+            <td id="5">
+              
+            </td>
+            <td id="6">
+              
+            </td>
+          </tr>
+          <!--3rd row-->
+          <tr>
+            <td id="7">
+              
+            </td>
+            <td id="8">
+              
+            </td>
+            <td id="9">
+              
+            </td>
+          </tr>
+        </table>
+      </div>
+     <!--result is here&-->
+     <div class="collapse result" id="txt">
+       <h1 class="tit">
+         Hi,<br>
+         <span id="name">
+           
+         </span>
+         <br>
+         Your DOB is 👉
+         <span id="dob">
+           
+         </span><br>& Your lucky No is 👉 
+         <span id="demo">
+           
+         </span>
+         
+         <br>
+         <br>
+       Your lucky number is hide this No.👉
+         <span id="tot">
+           
+         </span>
+       <br>
+       <input type="button" data-toggle="table" data-target="#tab" value="See Now" class="check" id="sum">
+       </h1>
+     </div>
+    </div>
+  </div>
+  <textarea id="num"></textarea>
+</header>
+<script src="jQuery.js"></script>
+<script>
+$('.table').hide();
+$('.collapse').hide();
+$('.ret').click(function(){
+  $('.collapse').hide(1000);
+  $('.table').hide(1000);
+});
+
+
+ $('.btn').click(function(){
+   var name= document.getElementById("Name").value;
+var dob = document.getElementById("selects").value;
+if(name == "" || dob == ""){
+  alert('please enter the right value');
+}else{
+      $('.collapse').show(1000);
+    }
+ });
+  $('.check').click(function(){
+    $('.table').show(1000);
+  });
+
+</script>
+<script>
+
+ var btn = document.getElementById("btn");
+     btn.addEventListener("click" ,
+     function myfun(){
+    var name = document.getElementById("Name").value;
+    var data = document.getElementById("selects").value;
+    document.getElementById("name").innerHTML= name;
+    document.getElementById("dob").innerHTML= data;
+   // console.log(name,data);
+   data.split("");
+   //console.log(data[0]);
+   var y= Number(data[2]+data[3]);
+   var m= Number(data[5]+data[6]);
+   var d= Number(data[8]+data[9]);
+  // console.log(d,m,y);
+ var step1 =Number(document.getElementById("2").innerHTML= y);
+ var step2 = Number(document.getElementById("7").innerHTML= y+d);
+ var step3 = Number(document.getElementById("6").innerHTML= step2+d);
+ var step4 = Number(document.getElementById("9").innerHTML= step1-m);
+ var step5 = Number(document.getElementById("4").innerHTML= step4-m);
+var step6 = Number(document.getElementById("5").innerHTML= step2-m);
+var step7 = Number(document.getElementById("3").innerHTML= step6-m);
+var step8 = Number(document.getElementById("1").innerHTML= step3-m);
+var step9 = Number(document.getElementById("8").innerHTML= step8-m);
+
+var to= Number(step1+step7+step8);
+console.log(to);
+document.getElementById("tot").innerHTML=to;
+ document.getElementById("num").innerHTML=to;
+  });
+
+
+var sum = document.getElementById("sum");
+sum.addEventListener("click", function(){
+  var tot = document.getElementById("num").value;
+  
+ for(i=0;i<tot.length;i++){
+  i=tot.split("");
+if(i.length==1){
+  document.getElementById("demo").innerHTML=i[0];
+//console.log(Number(i[0]));
+}else if(i.length==2){
+document.getElementById("demo").innerHTML=(Number(i[0])+Number(i[1]));
+//console.log(Number(i[0])+Number(i[1]));
+}else if(i.length==3){
+document.getElementById("demo").innerHTML=(Number(i[0])+Number(i[1])+Number(i[2]));
+//console.log(Number(i[0])+Number(i[1])+Number(i[2]));
+}
+else {
+  console.log("not working");
+}
+}
+})
+</script>
+</body>
+
+</html>
