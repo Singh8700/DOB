@@ -25,7 +25,7 @@ header .data{
 .data .tit{
   text-align: center;
   font-size: 13vw;
-  margin-top: -70%;
+ 
   text-shadow: 2px 5px 9px black;
   color:white;
 }
@@ -61,7 +61,7 @@ header .collapse{
   width:100%;
   height:auto;
   margin: auto;
-  margin-top: -60%;
+  
   display: flex;
   justify-content: center;
   padding: 5px;
@@ -105,7 +105,7 @@ table,textarea{
 }
 @media(max-width:660px){
   .data .tit{
-    margin-top: -45%;
+    
   }
   header .bn input, .tit input{
     font-size: 4vw;
