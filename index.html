@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Date Of Birth Game</title>
+  <title>Date Of Birt</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,8 +18,8 @@
         
         <form>
         <div class="inp">
-        <input type="text" id="Name" placeholder="Enter your Name">
-        <input type="date" id="selects" placeholder="Select Your DOB">
+        <input type="text" id="Name">
+        <input type="date" id="selects">
         </div>
         <div class="bn">
         <input type="button" id="btn" data-toggle="collapse" data-target="#txt" class="btn" value="check">
@@ -33,7 +33,7 @@
       
       <!--table is heer-->
       <div class="table">
-        <table border="0">
+        <table border="2">
           <!--first row-->
           <tr>
             <td id="1">
@@ -86,19 +86,27 @@
            Your DOB is 👉
            <span id="dob">
   
-           </span><br>& Your lucky No is 👉
-           <span id="demo">
-  
-           </span>
-  
-           <br>
+           </span><br>
            <br>
            Your lucky number is hide this No.👉
            <span id="tot">
   
            </span>
+           <br />
+           <br>
+           How to Work Click this button & see 👇
+           
+           <br>
            <br>
            <input type="button" data-toggle="table" data-target="#tab" value="See Now" class="check" id="sum">
+           <br>
+           <br>
+           Your lucky No is 👉
+           <span id="demo">
+  
+           </span>
+  
+           <br>
          </h1>
        </div>
   <textarea id="num"></textarea>
@@ -125,6 +133,10 @@ if(name == "" || dob == ""){
  });
   $('.check').click(function(){
     $('.table').show(1000);
+    var num = document.getElementById("num").value;
+    console.log(num);
+    alert("If you add the numbers given in the box from any side, then you will get the same number which is this 👉"+" "+num);
+  /*  "<br>"+"यदि आप बॉक्स में दिए गए नंबरों को किसी भी तरफ से जोड़ दें, तो आपको वही नंबर मिलेगा जो कि य  ह है 👉 " + num);*/
   });
 
 </script>
