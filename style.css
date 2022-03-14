@@ -19,7 +19,6 @@ header .main{
   flex-direction: column;
 }
 header .data{
-  width:80vw;
   margin: auto;
 }
 .data .tit{
