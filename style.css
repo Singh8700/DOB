@@ -48,7 +48,7 @@ header .bn #btn,header #ret,header #sum{
   border-radius: 10px;
   padding: 5px;
 }
-header table,header textarea{
+header table,#num{
   display: none;
 }
 header .result{
