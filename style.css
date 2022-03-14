@@ -4,12 +4,12 @@
 }
 html{
   font-size: 62.5%;
-}
+}/*
 header{
  width:90vw;
-/* background: red;*/
+/* background: red;
  margin: auto;
-}
+}*/
 header .main{
   width:85vw;
  /* background: blue;*/
@@ -23,7 +23,7 @@ header .data{
 }
 .data .tit{
   text-align: center;
-  font-size: 13vw;
+  font-size: 8vw;
  
   text-shadow: 2px 5px 9px black;
   color:white;
@@ -65,9 +65,9 @@ header .collapse{
   justify-content: center;
   padding: 5px;
   
-}
+}/*
 header table{
- /* background: red;*/
+  background: red;
   width:100px;
   height:50px;
   position: fixed;
@@ -75,9 +75,9 @@ header table{
   margin: auto;
   padding: 0px;
   border-radius: 25px;
-}
+}*/
 .result .tit{
-  font-size: 6vw;
+  font-size: 5vw;
   text-align: center;
   color:#aee;
   text-shadow: 5px 3px 4px black;
@@ -90,7 +90,7 @@ header table{
   font-size: 10vw;
   text-shadow: 2px 2px 4px black;
   color:rgba(255,110,110,0.9);
-}
+}/*
 @keyframes colr{
   0%{
     
@@ -98,14 +98,11 @@ header table{
   100%{
    
   }
-}
+}*/
 table,textarea{
   display: none;
 }
 @media(max-width:660px){
-  .data .tit{
-    
-  }
   header .bn input, .tit input{
     font-size: 4vw;
   }
