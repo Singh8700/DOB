@@ -8,9 +8,9 @@ header{
   width:90vw;
  /* border: 2px solid red;*/
   margin: auto;
-  position: absolute;
+  /*position: absolute;
   top:5%;
-  left: 5%;
+  left: 5%;*/
   padding: 10px;
   animation: zom .8s linear 1 alternate;
 }
